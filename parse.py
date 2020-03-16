@@ -58,10 +58,10 @@ for bioinform in library:
     OwnerDisplayName)
     VALUES(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)''', (Id, PostTypeId, ParentId, AcceptedAnswerId, CreationDate, Score, ViewCount, Body, OwnerUserId, LastEditorUserId, LastEdiDate, LastActivityDate, CommentCount, Title, Tags, AnswerCount, FavoriteCount, ClosedDate, OwnerDisplayName) )
 db.commit()
-
+catalog = ET.Element('catalog')
 from xml.dom import minidom
 
-xml_str = minidom.parseString(eTree.tostring(catalog).encode('utf-8')).toprettyxml(indent=" ")
+xml_str = minidom.parseString(ET.tostring(catalog).encode('utf-8')).toprettyxml(indent=" ")
 
 with open("new_data.xml", 'w') as xml_file:
     xml_file.write(xml_str.encode('utf-8'))
