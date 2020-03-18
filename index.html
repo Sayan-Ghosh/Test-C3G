@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <table class="table table-hover">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>PostTypeId</th>
+        <th>AcceptedAnswerId</th>
+        <th>ParentId</th>
+        <th>CreationDate</th>
+        <th>Score</th>
+        <th>ViewCount</th>
+        <th>Body</th>
+        <th>OwnerUserId</th>
+        <th>OwnerDisplayName</th>
+        <th>LastEditorUserId</th>
+        <th>LastEditDate</th>
+        <th>LastActivityDate</th>
+        <th>Title</th>
+        <th>Tags</th>
+        <th>AnswerCount</th>
+        <th>CommentCount</th>
+        <th>ClosedDate</th>
+        <th>FavoriteCount</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in rows %}
+      <tr>
+        <td>{{row.Id}}</td>
+        <td>{{row.PostTypeId}}</td>
+        <td>{{row.AcceptedAnswerId}}</td>
+        <td>{{row.ParentId}}</td>
+        <td>{{row.CreationDate}}</td>
+        <td>{{row.Score}}</td>
+        <td>{{row.ViewCount}}</td>
+        <td>{{row.Body}}</td>
+        <td>{{row.OwnerUserId}}</td>
+        <td>{{row.OwnerDisplayName}}</td>
+        <td>{{row.LastEditorUserId}}</td>
+        <td>{{row.LastEditDate}}</td>
+        <td>{{row.LastActivityDate}}</td>
+        <td>{{row.Title}}</td>
+        <td>{{row.Tags}}</td>
+        <td>{{row.AnswerCount}}</td>
+        <td>{{row.CommentCount}}</td>
+        <td>{{row.ClosedDate}}</td>
+        <td>{{row.FavoriteCount}}</td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</html>
